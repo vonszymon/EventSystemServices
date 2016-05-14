@@ -10,8 +10,6 @@ public class Commentary {
 	private Date publishDate;
 	private String content;
 	
-	
-	
 	public Commentary() {
 		super();
 	}

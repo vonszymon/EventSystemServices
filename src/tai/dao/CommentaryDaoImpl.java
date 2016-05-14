@@ -68,7 +68,7 @@ public class CommentaryDaoImpl implements CommentaryDao{
 	@Override
 	public Commentary getCommentary(String id) {
 		List<Commentary> commentList = new ArrayList<Commentary>();
-		String sql = "select * from Commentary where commentary_id= " + id;
+		String sql = "select commentary_id, event_id, author, publish_date, content from Commentary where commentary_id= " + id;
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		commentList = jdbcTemplate.query(sql, new CommentaryRowMapper());
 		return commentList.get(0);

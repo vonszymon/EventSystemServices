@@ -21,7 +21,6 @@ public class CommentaryExtractor {
 		comment.setEventID(resultSet.getInt(2));
 		comment.setAuthor(resultSet.getString(3));
 		try {
-			if(resultSet.getString(4)!=null)
 			comment.setPublishDate(df.parse(resultSet.getString(4)));
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
