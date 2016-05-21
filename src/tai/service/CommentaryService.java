@@ -44,7 +44,7 @@ public class CommentaryService {
 		commentaryDao.updateData(comment, commentId);
 	}
 	
-	@RequestMapping(value = "/delete/{commentId}", method=RequestMethod.GET)
+	@RequestMapping(value = "/delete/{commentId}", method=RequestMethod.DELETE)
 	public void deleteComment(@PathVariable String commentId){
 		commentaryDao.deleteData(commentId);
 	}

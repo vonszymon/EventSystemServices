@@ -24,9 +24,8 @@ public class EventService {
 	EventDao eventDao;
 	
 	@RequestMapping(value = "/{eventId}", method=RequestMethod.GET)
-	public @ResponseBody ResponseEntity<Event> getEvent(@PathVariable String eventId){
-		Event event = eventDao.getEvent(eventId);
-		return new ResponseEntity<Event>(event, HttpStatus.OK);
+	public @ResponseBody Event getEvent(@PathVariable String eventId){
+		return eventDao.getEvent(eventId);
 	}
 	
 	@RequestMapping(value = "/eventlist", method=RequestMethod.GET)
