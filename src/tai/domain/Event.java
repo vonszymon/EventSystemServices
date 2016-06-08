@@ -14,6 +14,10 @@ public class Event {
 	private List<Tweet> tweets;
 	private boolean active;
 	
+	public String toString(){
+		return "" + eventID + " " + title + " " + startDate + " " + content + " " + numOfComments;
+	}
+	
 	
 	public boolean isActive() {
 		return active;
@@ -63,6 +67,5 @@ public class Event {
 	public void setNumOfComments(int numOfComments) {
 		this.numOfComments = numOfComments;
 	}
-	
 	
 }
